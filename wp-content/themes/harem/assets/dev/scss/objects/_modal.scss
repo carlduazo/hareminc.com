@@ -1,0 +1,31 @@
+.modal {
+  height: max-content !important;
+  margin: auto !important;
+  
+  & > .header {
+
+    h3 {
+      font-size: font-size('h3') !important;
+      font-weight: font-weight('medium') !important;
+      color: color('primary') !important;
+      letter-spacing: normal !important;
+    }
+  }
+
+  & > .content {
+    
+    @include state('modal--route', '.modal') {
+      padding: 0 !important;
+
+      .route-iframe-container {
+        overflow: hidden;
+
+        iframe {
+          width: 100% !important;
+          margin-bottom: -5px;
+          margin-top: -65px;
+        }
+      }
+    }
+  }
+}

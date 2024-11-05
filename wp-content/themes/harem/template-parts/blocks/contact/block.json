@@ -1,0 +1,16 @@
+{
+  "name": "epic/contact",
+  "title": "Contact",
+  "description": "A custom contact block that uses ACF fields.",
+  "style": [ "file:./contact.css" ],
+  "category": "chaiwallah",
+  "icon": "phone",
+  "keywords": ["contact", "chaiwallah", "harem"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "contact.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

@@ -1,0 +1,7 @@
+.border-radius-rounded {
+    border-radius: 20px;
+
+    @include media-breakpoint-down(md) {
+        border-radius: 10px;
+    }
+}

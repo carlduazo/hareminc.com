@@ -1,0 +1,16 @@
+{
+  "name": "epic/brand-locations",
+  "title": "Brand Locations",
+  "description": "A custom brand locations block that uses ACF fields.",
+  "style": [ "file:./brand-locations.css" ],
+  "category": "harem",
+  "icon": "location",
+  "keywords": ["brand", "locations", "harem"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "brand-locations.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

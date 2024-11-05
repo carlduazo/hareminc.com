@@ -1,0 +1,68 @@
+
+html,
+body {
+  font-size: 16px;
+  font-family: $font-body;
+
+  font-weight: 300;
+  color: color('dark');
+  scroll-behavior: auto !important;
+  background: color('primary-10');
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='10.5' cy='11.5' r='1.5' fill='%23775D86' fill-opacity='0.1'/%3E%3C/svg%3E%0A");
+  background-repeat: repeat;
+
+  &.phablet-nav-is-active {
+
+    @include media-breakpoint-down(md) {
+      overflow: hidden;
+    }
+  }
+}
+
+p {
+  font-family: $font-body;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.custom-panel {
+  background: color('white');
+  padding: spacing();
+  border-radius: 10px;
+
+  &--mt {
+    margin-top: spacing();
+  }
+
+  &--info {
+    
+    h2 {
+      font-size: 24px;
+      color: color('secondary');
+      margin-bottom: spacing('2x-small');
+    }
+  }
+}
+
+.coupon {
+
+  &__form {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: spacing('2x-small');
+  }
+
+  &__note {
+    width: 100%;
+    color: color('red');
+    margin-top: spacing('4x-small');
+    font-size: font-size('small');
+  }
+}
+
+.row-gap-md {
+  row-gap: spacing('large');
+}

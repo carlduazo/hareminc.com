@@ -1,0 +1,27 @@
+.lqip {
+  width: 100%;
+
+  &.lazyloaded {
+    width: auto;
+  }
+
+  // Modifiers
+  &--portrait {
+    width: auto;
+    height: 100%;
+
+    &.lazyloaded {
+      height: auto;
+    }
+  }
+}
+
+.lqip-background {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}

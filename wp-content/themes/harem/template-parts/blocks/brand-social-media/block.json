@@ -1,0 +1,16 @@
+{
+  "name": "epic/brand-social-media",
+  "title": "Brand social media",
+  "description": "A custom brand social media block that uses ACF fields.",
+  "style": [ "file:./brand-social-media.css" ],
+  "category": "harem",
+  "icon": "thumbs-up",
+  "keywords": ["brand", "social", "media", "harem"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "brand-social-media.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

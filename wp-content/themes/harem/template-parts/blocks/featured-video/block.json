@@ -1,0 +1,16 @@
+{
+  "name": "epic/featured-video",
+  "title": "Featured video",
+  "description": "A custom featured video block that uses ACF fields created by Epicode.",
+  "style": [ "file:./featured-video.css" ],
+  "category": "chaiwallah",
+  "icon": "video-alt3",
+  "keywords": ["featured", "videos", "chaiwallah", "epicode"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "featured-video.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

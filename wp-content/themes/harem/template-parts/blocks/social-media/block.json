@@ -1,0 +1,16 @@
+{
+  "name": "epic/social-media",
+  "title": "Social media",
+  "description": "A custom social media block that uses ACF fields created by Epicode.",
+  "style": [ "file:./social-media.css" ],
+  "category": "chaiwallah",
+  "icon": "heart",
+  "keywords": ["featured", "social", "media", "chaiwallah", "epicode"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "social-media.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

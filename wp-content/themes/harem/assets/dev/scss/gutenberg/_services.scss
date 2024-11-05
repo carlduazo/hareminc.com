@@ -1,0 +1,32 @@
+.services {
+
+    &__item {
+        
+
+        .image {
+            position: relative;
+            width: 100%;
+            padding-top: 75%;
+            overflow: hidden;
+            border-radius: 10px;
+
+            img {
+                @include image-cover;
+            }
+        }
+
+        .meta {
+            margin-top: spacing('x-small');
+            display: flex;
+            flex-direction: column;
+            row-gap: spacing('3x-small');
+
+            &__title {
+                text-transform: uppercase;
+                font-weight: font-weight('medium');
+                color: color('primary');
+                font-size: font-size('large');
+            }
+        }
+    }
+}

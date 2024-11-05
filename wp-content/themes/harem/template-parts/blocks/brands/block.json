@@ -1,0 +1,16 @@
+{
+  "name": "epic/brands",
+  "title": "Brands",
+  "description": "A custom brand block that uses ACF fields.",
+  "style": [ "file:./brands.css" ],
+  "category": "harem",
+  "icon": "text-page",
+  "keywords": ["featured", "brands", "harem"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "brands.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

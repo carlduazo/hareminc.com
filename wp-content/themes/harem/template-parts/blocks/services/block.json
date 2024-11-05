@@ -1,0 +1,16 @@
+{
+  "name": "epic/services",
+  "title": "Services",
+  "description": "A custom services block that uses ACF fields.",
+  "style": [ "file:./services.css" ],
+  "category": "harem",
+  "icon": "media-document",
+  "keywords": ["services", "harem"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "services.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

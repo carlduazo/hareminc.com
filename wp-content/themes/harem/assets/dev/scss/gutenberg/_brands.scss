@@ -1,0 +1,107 @@
+.brands {
+
+    &__nav {
+        margin-bottom: spacing();
+        margin-top: -24px;
+
+        .owl-stage {
+            margin: auto;
+            transform: translate3d(0px, 0px, 0px) !important;
+
+            .owl-item {
+                cursor: pointer;
+
+                opacity: 0.2;
+
+                &.is-active {
+                    opacity: 1;
+                }
+            }
+        }
+        .item {
+
+            img {
+                height: 77px;
+                min-height: 77px;
+                max-height: 77px;
+                width: auto;
+                max-width: 210px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    &__slider {
+
+        &.owl-carousel {
+            position: relative;
+
+            .owl-nav {
+                position: absolute;
+                left: -80px;
+                width: calc(100% + 160px);
+                top: 50%;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: space-between;
+            
+                .owl-prev,
+                .owl-next {
+                    width: 55px;
+                    height: 55px;
+                    border: dashed color('primary') 1px !important;
+                    border-radius: 100px;
+                    color: color('primary');
+                    position: relative;
+                    transition: transition();
+
+                    .icon {
+                        font-size: 32px;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    &:hover {
+                        color: color('white');
+                        background: color('primary');
+                    }
+                }
+            }
+        }
+    }
+
+    .section__header {
+        margin-bottom: spacing() !important;
+    }
+
+    .section__cta {
+        margin-top: 0 !important;
+    }
+
+    .image-wrap {
+        position: relative;
+
+        .image {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+            overflow: hidden;
+
+            border-radius: 30px 30px 300px 30px;
+            
+            img {
+                @include image-cover;
+            }
+        }
+
+        .play-button {
+            position: absolute;
+            bottom: 0;
+            right: 30px;
+            z-index: 2;
+            cursor: pointer;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "epic/blogs",
+  "title": "Blog",
+  "description": "A custom blog block that uses ACF fields created by Epicode.",
+  "style": [ "file:./blogs.css" ],
+  "category": "chaiwallah",
+  "icon": "text-page",
+  "keywords": ["featured", "blogs", "chaiwallah", "epicode"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "blogs.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

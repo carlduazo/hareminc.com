@@ -1,0 +1,31 @@
+.owl-dots {
+    display: flex;
+    justify-content: center;
+    column-gap: spacing('3x-small');
+    margin-top: spacing();
+
+    button.owl-dot {
+        width: 15px;
+        height: 15px;
+        border: solid color('primary') 1px;
+        border-radius: 100px;
+
+        @include state('section--primary', '.section') {
+            border-color: color('dark');
+        }
+
+        @include state('section--secondary', '.section') {
+            border-color: color('primary');
+        }
+
+        &.active {
+            border-color: color('primary');
+            background: color('primary');
+
+            @include state('section--primary', '.section') {
+                border-color: color('dark');
+                background: color('dark');
+            }
+        }
+    }
+}

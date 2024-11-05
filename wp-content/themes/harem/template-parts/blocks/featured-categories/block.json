@@ -1,0 +1,16 @@
+{
+  "name": "epic/featured-categories",
+  "title": "Featured categories",
+  "description": "A custom featured categories block that uses ACF fields created by Epicode.",
+  "style": [ "file:./featured-categories.css" ],
+  "category": "chaiwallah",
+  "icon": "category",
+  "keywords": ["featured", "categories", "chaiwallah", "epicode"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "featured-categories.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

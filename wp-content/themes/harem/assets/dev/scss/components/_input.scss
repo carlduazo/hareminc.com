@@ -1,0 +1,66 @@
+.input-field {
+    @include input;
+    width: 100%;
+}
+
+textarea.input-field {
+    height: 200px;
+}
+
+.form-group {
+
+    label {
+        font-size: font-size('small');
+        font-weight: font-weight('semibold');
+        margin-bottom: 6px;
+    }
+}
+
+.title {
+
+    &--h2 {
+        font-size: font-size('large');
+        font-family: $font-header;
+        font-weight: font-weight('semibold');
+        text-transform: uppercase;
+        transition: transition();
+        font-size: 24px;
+        margin-bottom: spacing('small');
+    }
+}
+
+.wpcf7 {
+    
+    .wpcf7-form {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .wpcf7-response-output {
+            margin: 0;
+            margin-bottom: spacing('2x-small');
+            border-top: 0;
+            box-shadow: none;
+            border: 0 !important;
+            border-radius: 6px;
+            outline: none;
+            padding: spacing('x-small');
+            padding-right: spacing('x-large');
+            background: color('dark');
+            color: white;
+
+            @include state('invalid', '.wpcf7-form') {
+                background: color('red');
+                color: color('white')
+            }
+            
+            @include state('sent', '.wpcf7-form') {
+                background: color('green');
+                color: color('white')
+            }
+        }
+
+        .wpcf7-not-valid-tip {
+            font-size: font-size('small');
+        }
+    }
+}

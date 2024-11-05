@@ -1,0 +1,108 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?j7bq3u');
+  src:  url('fonts/icomoon.eot?j7bq3u#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?j7bq3u') format('truetype'),
+    url('fonts/icomoon.woff?j7bq3u') format('woff'),
+    url('fonts/icomoon.svg?j7bq3u#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-linkedin:before {
+  content: "\e918";
+}
+.icon-tiktok:before {
+  content: "\e919";
+}
+.icon-website:before {
+  content: "\e91a";
+}
+.icon-calendar:before {
+  content: "\e916";
+}
+.icon-clock:before {
+  content: "\e917";
+}
+.icon-trash:before {
+  content: "\e915";
+}
+.icon-minus:before {
+  content: "\e913";
+}
+.icon-plus:before {
+  content: "\e914";
+}
+.icon-search:before {
+  content: "\e912";
+}
+.icon-menu:before {
+  content: "\e911";
+}
+.icon-close:before {
+  content: "\e910";
+}
+.icon-play:before {
+  content: "\e90f";
+}
+.icon-check:before {
+  content: "\e90e";
+}
+.icon-email:before {
+  content: "\e908";
+}
+.icon-location:before {
+  content: "\e909";
+}
+.icon-telephone:before {
+  content: "\e90a";
+}
+.icon-account:before {
+  content: "\e906";
+}
+.icon-shopping-bag:before {
+  content: "\e907";
+}
+.icon-facebook:before {
+  content: "\e901";
+}
+.icon-instagram:before {
+  content: "\e902";
+}
+.icon-pinterest:before {
+  content: "\e903";
+}
+.icon-x:before {
+  content: "\e904";
+}
+.icon-youtube:before {
+  content: "\e905";
+}
+.icon-angle-down:before {
+  content: "\e900";
+}
+.icon-angle-up:before {
+  content: "\e90b";
+}
+.icon-angle-right:before {
+  content: "\e90c";
+}
+.icon-angle-left:before {
+  content: "\e90d";
+}

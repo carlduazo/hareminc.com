@@ -1,0 +1,219 @@
+.button,
+.btn,
+a.button {
+    all: unset;
+    box-sizing: border-box;
+    display: inline-flex;
+    background: color('primary');
+    color: color('dark');
+    letter-spacing: 1px;
+    font-family: $font-body;
+    font-size: font-size();
+    font-weight: font-weight('bold');
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: transition();
+    cursor: pointer;
+    padding: spacing('x-small') spacing('x-large');
+
+    &:hover {
+        background: color('primary-120');
+        color: color('dark');
+    }
+
+    &--square {
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &--large {
+        padding: spacing('small') spacing('x-large');
+        font-size: font-size('large');
+
+        @include media-breakpoint-down(md) {
+            padding: spacing('x-small') spacing('x-large');
+            font-size: font-size();
+        }
+    }
+
+    &--white {
+        background: color('white');
+        color: color('primary');
+
+        &:hover {
+            background: color('primary');
+            color: color('dark');
+        }
+    }
+
+    &--outline-primary {
+        border: solid color('primary') 1px;
+        background: transparent;
+        color: color('primary');
+
+        &:hover {
+            border: solid color('primary') 1px;
+            background: color('primary');
+            color: color('white');
+        }
+    }
+
+    &--outline-secondary {
+        border: solid color('secondary') 1px;
+        background: color('white');
+        color: color('secondary');
+
+        &:hover {
+            border: solid color('secondary') 1px;
+            background: color('secondary');
+            color: color('white');
+        }
+    }
+
+    &--white-secondary {
+        background: color('white');
+        color: color('secondary');
+
+        &:hover {
+            background: color('secondary');
+            color: color('white');
+        }
+    }
+
+    &--secondary {
+        background: color('secondary');
+        color: color('white');
+
+        &:hover {
+            background: color('secondary-120');
+            color: color('white');
+        }
+    }
+
+    &--facebook {
+        background: #1877F2;
+        color: color('white');
+
+        &:hover {
+            background: #165DC2;
+            color: color('white');
+        }
+    }
+
+    &--x {
+        background: #1D9BF0;
+        color: color('white');
+
+        &:hover {
+            background: #1478CC;
+            color: color('white');
+        }
+    }
+
+    &--instagram {
+        background: linear-gradient(45deg, #E1306C, #C13584, #F77737, #FD1D1D);
+        color: color('white');
+
+        &:hover {
+            background: linear-gradient(45deg, #D6296E, #D6296E, #D6296E, #D6296E);
+            color: color('white');
+        }
+    }
+
+    &--instagram {
+        background: linear-gradient(45deg, #E1306C, #C13584, #F77737, #FD1D1D);
+        color: color('white');
+
+        &:hover {
+            background: #B8001B;
+            color: color('white');
+        }
+    }
+
+    &--pinterest {
+        background: #E60023;
+        color: color('white');
+
+        &:hover {
+            background: #B8001B;
+            color: color('white');
+        }
+    }
+
+    &--youtube {
+        background: #FF0000;
+        color: color('white');
+
+        &:hover {
+            background: #CC0000;
+            color: color('white');
+        }
+    }
+
+    &--rounded {
+        width: 48px;
+        height: 48px;
+        padding: 0;
+        border-radius: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &--social {
+        background: transparent;
+        border: dashed color('secondary') 1px;
+        color: color('secondary');
+        transition: transition();
+
+        &:hover {
+            background: color('secondary');
+            border: solid color('secondary') 1px;
+            color: color('white');
+        }
+    }
+
+    &--brand {
+        background: transparent;
+        border: dashed var(--brand-color) 1px;
+        color: var(--brand-color);
+        transition: transition();
+
+        &:hover {
+            background: var(--brand-color);
+            border: var(--brand-color) 1px;
+            color: color('white');
+        }
+    }
+}
+
+.play-button {
+    width: 130px;
+    height: 130px;
+    border-radius: 200px;
+    background: color('secondary');
+    color: color('white');
+    position: relative;
+    -webkit-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.14);
+    -moz-box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.14);
+    box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.14);
+    transition: transition();
+
+    .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-45%, -50%);
+        color: color('white');
+        font-size: 50px;
+    }
+
+    &:hover {
+        transform: scale(1.2);
+        background: color('secondary-120');
+    }
+}

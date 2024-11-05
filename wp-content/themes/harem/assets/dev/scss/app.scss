@@ -1,0 +1,84 @@
+
+// Helpers
+// --------------------------------
+@import 'tools/specify';
+@import 'tools/state';
+
+
+// // Global
+// // --------------------------------
+@import '~bootstrap/scss/functions'; // We need to load bootstrap functions to modify the variable file
+
+@import 'global/variables'; // Has to be loaded before bootstrap to overwrite the Bootstrap vars
+
+$grid-breakpoints: (
+  xs: 0,
+  3xs: 321px,
+  2xs: 391px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  2lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@import 'global/config'; 
+@import 'global/fonts'; 
+@import 'global/typography'; 
+
+// // Tools
+// // --------------------------------
+@import 'tools/functions'; 
+@import 'tools/mixins'; 
+
+// // Vendor
+// // --------------------------------
+@import '~bootstrap/scss/bootstrap';
+@import 'global/base'; 
+@import 'global/typography'; 
+@import 'global/overwrites'; 
+
+// // Modules
+// // --------------------------------
+@import 'modules/content-builder'; 
+@import 'modules/footer'; 
+@import 'modules/lasktop'; 
+@import 'modules/phablet'; 
+@import 'modules/slider'; 
+
+// // Objects
+// // --------------------------------
+@import 'objects/photoswipe'; 
+@import 'objects/select';
+@import 'objects/table';
+@import 'objects/tag';
+@import 'objects/videos';
+
+// // Components
+// // --------------------------------
+@import 'components/accordion'; 
+@import 'components/button';
+@import 'components/company';
+@import 'components/input'; 
+@import 'components/search'; 
+@import 'components/section'; 
+@import 'components/tab'; 
+@import 'components/topbar'; 
+
+// // Gutenberg
+// // --------------------------------
+@import 'gutenberg/banner'; 
+@import 'gutenberg/brands'; 
+@import 'gutenberg/blogs'; 
+@import 'gutenberg/categories'; 
+@import 'gutenberg/locations'; 
+@import 'gutenberg/products'; 
+@import 'gutenberg/services'; 
+@import 'gutenberg/slider'; 
+@import 'gutenberg/testimonials'; 
+@import 'gutenberg/usps'; 
+
+.row {
+  --bs-gutter-x: 2.5rem;
+}

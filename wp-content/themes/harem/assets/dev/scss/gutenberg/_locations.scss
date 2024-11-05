@@ -1,0 +1,87 @@
+.locations {
+
+    &__cities {
+        display: flex;
+        flex-direction: column;
+        row-gap: spacing('3x-small');
+        width: 100%;
+
+        .city {
+            width: 100%;
+            font-size: font-size('large');
+            font-weight: font-weight('semibold');
+            text-transform: uppercase;
+            padding: spacing('2x-small');
+            padding-top: spacing('x-small');
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transition();
+            position: relative;
+
+            &.tab-title-active {
+                background: color('primary');
+                color: color('white');
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 100%;
+                    top: 50%;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 7.5px 0 7.5px 8px;
+                    border-color: transparent transparent transparent color('primary');
+                    transform:  translateY(-50%) rotate(0deg);
+                }
+            }
+
+            &:not(.tab-title-active):hover {
+                background: color('bg-light');
+            }
+        }
+    }
+
+    &__meta {
+        display: flex;
+        flex-direction: column;
+        row-gap: spacing('3x-small');
+
+        .rich-text {
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+
+        .item {
+            display: flex;
+            column-gap: spacing('2x-small');
+        }
+
+        .icon {
+            font-size: font-size('large');
+            color: color('primary');
+            position: relative;
+            top: 2px;
+
+            &-telephone {
+                -webkit-text-stroke-width: 0.5px;
+            }
+        }
+    }
+
+    &__map {
+        display: block;
+        padding-top: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        background: color('bg-light');
+        @include box-shadow-panel;
+
+        iframe {
+            @include image-cover;
+        }
+    }
+}

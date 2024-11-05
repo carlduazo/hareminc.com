@@ -1,0 +1,28 @@
+/**
+* Font Family Playfair Display
+*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+/**
+* Font Family SweetSans
+*/
+@font-face {
+    font-family: 'SweetSans';
+    font-weight: 300;
+    src: url('#{$fonts-path}/sweet-sans/SweetSansProLight.otf') format('opentype');
+}
+
+
+@font-face {
+    font-family: 'SweetSans';
+    font-weight: 400;
+    src: url('#{$fonts-path}/sweet-sans/SweetSansProRegular.otf') format('opentype');
+}
+
+
+@font-face {
+    font-family: 'SweetSans';
+    font-weight: 500;
+    src: url('#{$fonts-path}/sweet-sans/SweetSansProMedium.otf') format('opentype');
+}

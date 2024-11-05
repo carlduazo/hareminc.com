@@ -1,0 +1,16 @@
+{
+  "name": "epic/cta",
+  "title": "CTA",
+  "description": "A custom CTA block that uses ACF fields.",
+  "style": [ "file:./cta.css" ],
+  "category": "harem",
+  "icon": "products",
+  "keywords": ["cta", "harem"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "cta.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

@@ -1,0 +1,142 @@
+// Paths
+// --------------------------------
+$fonts-path: '../fonts';
+$images-path: '../images';
+$font-header: "Playfair Display", sans-serif;
+$font-body: "SweetSans", "Lato", "Poppins", sans-serif;
+
+// Font sizes
+// --------------------------------
+$font-sizes: (
+  '2x-small': 0.625rem,
+  'x-small': 0.75rem,
+  'small': 14px,
+  'default': 16px,
+  'large': 18px,
+  'x-large': 1.25rem,
+  '2x-large': 1.5rem,
+  '3x-large': 2rem,
+  '4x-large': 2.5rem,
+  'huge': 3rem,
+  'heading' : 50px,
+  'h1' : 40px,
+  'h2' : 32px,
+  'h3' : 24px,
+  'h4' : 20px,
+  'h5' : 16px
+);
+
+$font-weights: (
+  'default' : 300, 
+  'regular' : 400,
+  'light': 100,
+  'medium': 500,
+  'semibold': 600,
+  'bold' : 700
+);
+
+$line-heights: (
+  'default' : 1.5
+);
+
+// Spacing units
+// --------------------------------
+$spacing-units: (
+  'full': 100%,
+  'auto': auto,
+  'none': 0,
+  '4x-small': 4px,
+  '3x-small': 8px,
+  '2x-small': 12px,
+  'x-small': 16px,
+  'small': 20px,
+  'default': 24px,
+  'large': 32px,
+  'x-large': 40px,
+  '2x-large': 48px,
+  '3x-large': 56px,
+  'huge': 64px,
+  'x-huge': 96px,
+  '2x-huge': 128px,
+  '3x-huge': 160px,
+  'giant': 192px,
+  'x-giant': 240px,
+  '2x-giant': 320px
+);
+
+
+// Colors
+// --------------------------------
+$colors: (
+  'primary-120': #6c3a7b,
+  'primary': #854A97,
+  'primary-20': #FFF8DA,
+  'primary-10': #F6EFF6,
+  'primary-border' : #C9BAD1,
+
+  'secondary-120': #D19804,
+  'secondary': #D99D02,
+  // 'secondary-80': #3C8CDD,
+  // 'secondary-60': #7DB3E8,
+  // 'secondary-40': #A8CCF0,
+  // 'secondary-20': #D4E5F7,
+  // 'secondary-10': #EEF5FC,
+
+  'white': #ffffff,
+
+  'dark': #101020,
+  'light': #a8a8a8,
+  'bg-light': #f7f7f7,
+  'border' : #e2e2e2,
+  'border-light' : #f1f1f4,
+  'red' : #CD331E,
+  'green' : #1DBC60,
+
+  'transparent': transparent,
+
+  'yellow': #FFC107,
+  'whatsapp': #259937,
+
+  // Greys
+  'grey': #48494A,
+  'grey-80': #656667,
+  'grey-60': #A5A5A7,
+  'grey-40': #CBCCCD,
+  'grey-20': #E5E5E6,
+  'grey-10': #F2F2F2,
+
+  'linear-gradient' : linear-gradient(92deg, #2364AA 1.69%, #73BFB8 146.53%),
+  'linear-gradient-hover' : linear-gradient(92deg, #152F65 1.69%, #5BA29B 146.53%),
+
+  'linear-whatsapp': linear-gradient(92.15deg, #2BB741 1.69%, #25D366 146.53%),
+  'linear-whatsapp-hover': linear-gradient(92.15deg, #25a338 1.69%, #20c85e 146.53%)
+);
+
+// Wrapper object widths
+// --------------------------------
+$wrapper-widths: (
+  '3x-small': 320px,
+  '2x-small': 480px,
+  'x-small': 620px,
+  'small': 960px,
+  'default': 1280px,
+  'large': 1440px,
+);
+
+// Transitions
+// @link https://goo.gl/YT7XK8
+// --------------------------------
+$transitions: (
+  'standard': cubic-bezier(0.4, 0, 0.2, 1),
+  'enter': cubic-bezier(0.0, 0, 0.2, 1),
+  'leave': cubic-bezier(0.4, 0, 1, 1),
+  'bounce': cubic-bezier(0.6, 2, 0.7, 0.5),
+  'ease': ease 0.3s all
+);
+
+// Border radius
+// --------------------------------
+$border-radius: (
+  'default': 8px,
+  'large': 16px
+);

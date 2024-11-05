@@ -1,0 +1,16 @@
+{
+  "name": "epic/testimonials",
+  "title": "Testimonials",
+  "description": "A custom testimonial block that uses ACF fields.",
+  "style": [ "file:./testimonials.css" ],
+  "category": "harem",
+  "icon": "format-image",
+  "keywords": ["image", "testimonial", "harem"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "testimonials.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

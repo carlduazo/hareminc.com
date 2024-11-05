@@ -1,0 +1,22 @@
+.company {
+    display: flex;
+    flex-direction: column;
+    row-gap: spacing();
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        row-gap: spacing('3x-small');
+
+        .title {
+            font-weight: font-weight('medium');
+        }
+
+        .value {
+
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

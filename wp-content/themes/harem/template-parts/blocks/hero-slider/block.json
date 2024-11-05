@@ -1,0 +1,16 @@
+{
+  "name": "epic/hero-slider",
+  "title": "Hero slider",
+  "description": "A custom hero slider block that uses ACF fields.",
+  "style": [ "file:./hero-slider.css" ],
+  "category": "chaiwallah",
+  "icon": "slides",
+  "keywords": ["hero", "slider", "banner", "epicode"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "hero-slider.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

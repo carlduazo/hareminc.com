@@ -1,0 +1,101 @@
+.accordion-group {
+    display: flex;
+    flex-direction: column;
+    row-gap: spacing('large');
+
+    &--locations {
+        row-gap: 0;
+    }
+}
+
+.accordion {
+    background: color('white');
+    padding: spacing('large');
+    border-radius: 20px;
+    @include box-shadow;
+
+    @include state('accordion-group--locations', '.accordion-group') {
+        background: transparent;
+        border-bottom: solid color('border') 1px;
+        border-radius: 0;
+        padding: spacing('2x-small') 0;
+    }
+
+    .accordion-title {
+        display: flex;
+        column-gap: spacing('x-small');
+        cursor: pointer;
+        
+
+        h2 {
+            font-size: 24px;
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        h3 {
+
+            @include state('accordion-group--locations', '.accordion-group') {
+                font-size: font-size('large');
+                font-weight: font-weight('semibold');
+                margin-bottom: 0;
+                flex: 1;
+
+                @include state('accordion-active', '.accordion') {
+                
+                    color: color('primary');
+                }
+            }
+        }
+
+        .icon {
+            position: relative;
+            top: 5px;
+            font-size: 18px;
+            color: color('secondary');
+
+
+            @include state('accordion-active', '.accordion') {
+                
+                &:before {
+                    content: '\e913';
+                }
+            }
+
+            @include state('accordion-group--locations', '.accordion-group') {
+                color: color('primary');
+                top: 1px;
+            }
+        }
+    }
+
+    .accordion-content {
+        padding-top: spacing('large');
+        display: none;
+
+        @include state('accordion-group--locations', '.accordion-group') {
+            padding-top: spacing('small');
+        }
+
+        .rich-text {
+            line-height: 1.6;
+            
+            strong {
+                font-weight: font-weight('semibold');
+            }
+        }
+
+        .links {
+            display: flex;
+            column-gap: spacing('x-small');
+            flex-wrap: wrap;
+
+            &__title {
+                margin-bottom: spacing('2x-small');
+                width: 100%;
+                font-weight: font-weight('semibold');
+                color: color('secondary');
+            }
+        }
+    }
+}

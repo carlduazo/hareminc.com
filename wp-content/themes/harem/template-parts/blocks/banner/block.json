@@ -1,0 +1,16 @@
+{
+  "name": "epic/banner",
+  "title": "Banner",
+  "description": "A custom banner block that uses ACF fields.",
+  "style": [ "file:./banner.css" ],
+  "category": "harem",
+  "icon": "cover-image",
+  "keywords": ["banner", "epicode"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "banner.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

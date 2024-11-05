@@ -1,0 +1,44 @@
+@keyframes fade-in {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+
+  animation: fade-in 0.4s forwards;
+}
+
+
+@keyframes float {
+
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+
+	50% {
+		transform: translate3d(0, -#{spacing('x-small')}, 0);
+	}
+  
+	100% {
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+
+@keyframes rotate {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

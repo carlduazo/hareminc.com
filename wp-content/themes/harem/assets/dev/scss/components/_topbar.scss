@@ -1,0 +1,30 @@
+.topbar {
+    position: relative;
+    z-index: 7;
+    background: color('primary');
+    max-height: 38px;
+    padding: spacing('3x-small') spacing('2x-small');
+    font-family: $font-header;
+
+    &__slider {
+
+        .item {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: spacing('2x-small');
+
+            img {
+                width: 20px;
+                height: 20px;
+                object-fit: contain;
+            }
+
+            span {
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "epic/usps",
+  "title": "USPS",
+  "description": "A custom USPS block that uses ACF fields created by Epicode.",
+  "style": [ "file:./usps.css" ],
+  "category": "chaiwallah",
+  "icon": "grid-view",
+  "keywords": ["featured", "usps", "chaiwallah", "epicode"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "usps.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

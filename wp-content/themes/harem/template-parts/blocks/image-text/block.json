@@ -1,0 +1,16 @@
+{
+  "name": "epic/image-text",
+  "title": "Image text",
+  "description": "A custom image text block that uses ACF fields.",
+  "style": [ "file:./image-text.css" ],
+  "category": "opreis",
+  "icon": "format-image",
+  "keywords": ["image", "text", "chaiwallah", "epicode"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "image-text.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

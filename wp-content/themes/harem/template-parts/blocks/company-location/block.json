@@ -1,0 +1,16 @@
+{
+  "name": "epic/company-location",
+  "title": "Company location",
+  "description": "A custom company location block that uses ACF fields.",
+  "style": [ "file:./company-location.css" ],
+  "category": "harem",
+  "icon": "location-alt",
+  "keywords": ["company", "location", "harem"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "company-location.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

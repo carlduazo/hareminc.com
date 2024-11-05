@@ -1,0 +1,37 @@
+@function font-size($key: 'default') {
+  @return map-get($font-sizes, $key);
+}
+
+@function spacing($key: 'default') {
+  @return map-get($spacing-units, $key);
+}
+
+@function color($key: 'grey') {
+  @return map-get($colors, $key);
+}
+
+@function wrapper($key: 'default') {
+  @return map-get($wrapper-widths, $key);
+}
+
+@function transition($key: 'ease') {
+  @return map-get($transitions, $key);
+}
+
+@function border-radius($key: 'default') {
+  @return map-get($border-radius, $key);
+}
+
+@function font-weight($key: 'default') {
+  @return map-get($font-weights, $key);
+}
+
+// Utilities
+// --------------------------------
+@function to-str($value) {
+  @return $value + '';
+}
+
+@function em($value, $context: $rem-in-px) {
+  @return #{$value / $context}em;
+}

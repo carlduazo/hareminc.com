@@ -1,0 +1,191 @@
+.footer {
+    padding: spacing('2x-large') 0 0;
+    background: #f7f7f7;
+
+    @include media-breakpoint-down(md) {
+        text-align: center;
+    }
+
+    & > .container {
+        padding-bottom: spacing('2x-large');
+    }
+
+    &__brand {
+        margin-left: -10px;
+
+        img {
+            width: auto;
+            height: 30px;
+            object-fit: contain;
+        }
+    }
+
+    &__compliance {
+        margin-top: spacing('x-large');
+
+        .compliance {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: spacing('2x-small');
+            column-gap: spacing('small');
+
+            &__item {
+
+                img{
+                    width: auto;
+                    height: 80px;
+                    mix-blend-mode: multiply;
+                }
+            }
+        }
+    }
+
+    &__desc {
+        margin-top: spacing('x-small');
+    }
+
+    &__social {
+        margin-top: spacing();
+    }
+
+    &__title {
+        font-weight: font-weight('medium');
+        font-family: $font-body;
+        font-size: font-size();
+        text-transform: uppercase;
+        margin-bottom: spacing('x-small');
+        color: color('primary')
+    }
+
+    &__links {
+
+        & > ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-left: 0;
+            display: flex;
+            flex-direction: column;
+            row-gap: spacing('2x-small');
+
+            li {
+
+                a {
+                    transition: transition();
+
+                    &:hover {
+                        color: color('secondary');
+                    }
+                }
+            }
+        }
+    }
+
+    &__company-details {
+        display: flex;
+        flex-direction: column;
+        row-gap: spacing('2x-small');
+
+        @include media-breakpoint-down(md) {
+            row-gap: spacing();
+        }
+
+        .item {
+            display: flex;
+            column-gap: spacing('2x-small');
+
+            @include media-breakpoint-down(md) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &__icon {
+                font-size: 22px;
+                color: color('primary');
+                position: relative;
+                top: -4px;
+                border-radius: 4px;
+                text-align: center;
+
+                &--location {
+                    top: -2px;
+                }
+
+                .icon-telephone {
+                    -webkit-text-stroke: color('primary') 0.5px;
+                }
+            }
+
+            &__value {
+
+                p {
+
+                    @include media-breakpoint-down(md) {
+                        margin-bottom: 0;
+                    }
+                }
+
+            }
+        }
+    }
+
+    &__brands {
+        display: flex;
+        flex-direction: column;
+        row-gap: spacing();
+
+        .item {
+            display: flex;
+            flex-direction: column;
+            row-gap: spacing('small');
+        }
+
+        .logo {
+
+            img {
+                width: auto;
+                max-height: 60px;
+                height: auto;
+                max-width: 200px;
+            }
+        }
+    }
+
+    &__copyright {
+        padding: spacing('small') 0;
+        background: white;
+        font-size: 14px;
+
+        & > .container {
+            display: flex;
+            justify-content: space-between;
+            column-gap: spacing();
+            row-gap: spacing('2x-small');
+
+            @include media-breakpoint-down(md) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .payment {
+            display: flex;
+            column-gap: spacing('2x-small');
+
+            img {
+                width: auto;
+                height: 26px;
+                object-fit: contain;
+            }
+        }
+    }
+
+    .section__links {
+        justify-content: flex-start;
+        row-gap: spacing('2x-small');
+        margin-bottom: 0;
+
+        @include media-breakpoint-down(md) {
+            margin-bottom: spacing();
+        }
+    }
+}

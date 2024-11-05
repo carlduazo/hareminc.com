@@ -1,0 +1,103 @@
+.header {
+
+    .icon-menu {
+
+        &:before {
+
+            @include state('phablet-nav-is-active', 'body') {
+                content: "\e910";
+                -webkit-text-stroke: white 1px;
+            }
+        }
+    }
+
+    &__phablet {
+        background: white;
+        position: fixed;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: transition();
+        flex-direction: column;
+        transition: transition();
+        transform: translateY(-200%);
+        display: none;
+
+        @include media-breakpoint-down(md) {
+            display: flex;
+        }
+
+        @include state('phablet-nav-is-active', 'body') {
+            top: 108px;
+            transform: translateY(0);
+
+            @include state('header-is-stick', 'body'){
+                top: 70px;
+            }
+        }
+
+        .menu {
+            flex: 1;
+            overflow: auto;
+
+            & > ul {
+
+                & > li {
+                    display: flex;
+                    border-bottom: solid color('border') 1px;
+                    flex-wrap: wrap;
+
+                    a {
+                        font-family: $font-header;
+                        font-size: font-size('large');
+                        text-transform: uppercase;
+                        padding: spacing('2x-small') spacing('x-small');
+                        font-weight: font-weight('semibold');
+                        flex: 1;
+                        display: block;
+                    }
+
+                    .menu-expand {
+                        padding: spacing('2x-small') spacing('small');
+
+                        &.expanded {
+
+                            .icon {
+
+                                &:before {
+                                    content: '\e913';
+                                }
+                            }
+                        }
+                    }
+
+                    .submenu {
+                        display: none;
+                        width: 100%;
+
+                        &.submenu-expanded {
+                            display: block;
+                        }
+
+                        & > ul {
+                            list-style-type: none;
+                            padding: 0;
+
+                            & > li {
+
+                                & > a {
+                                    padding-left: spacing('x-large');
+                                    font-size: font-size();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .phablet-search {
+            border-bottom: solid color('border') 1px;
+        }
+    }
+}
