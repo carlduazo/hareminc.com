@@ -1,0 +1,16 @@
+{
+  "name": "epic/slider-images",
+  "title": "Slider images",
+  "description": "A custom slider images block that uses ACF fields.",
+  "style": [ "file:./slider-images.css" ],
+  "category": "harem",
+  "icon": "slides",
+  "keywords": ["slider", "images", "harem"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "slider-images.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

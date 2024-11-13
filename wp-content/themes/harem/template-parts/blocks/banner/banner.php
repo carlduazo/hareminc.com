@@ -14,7 +14,75 @@ $image = get_field('image') ?: '';
 $text = get_field('text') ?: '';
 $cta_style = get_field('cta_style') ?: 'white';
 $cta = get_field('cta');
+$banner_type = get_field('banner_type') ?: 'right-background';
+
+$images = get_field('images') ?: [];
+$no_padding_top = get_field('no_padding_top') ?: '';
 ?>
+
+<?php if($banner_type == 'multiple-images') { ?>
+<section class="section section--default pb-0 section--<?= $background_color; ?>">
+    <div class="container">
+        <div class="section__header section__header--<?= $section_header_color; ?>">
+            <?php if($supertitle) { ?>
+            <div class="section__supertitle section__supertitle--<?= $supertitle_style; ?>">
+                <?= $supertitle; ?>
+            </div>
+            <?php } ?>
+            <?php if($title) { ?>
+            <h2 class="section__title section__title">
+                <?= $title; ?>
+            </h2>
+            <?php } ?>
+            <?php if($text) { ?>
+            <div class="section__text rich-text">
+                <?= $text; ?>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+
+    <div class="banner-wrap">
+        <div class="banner-images">
+            <?php foreach($images as $image_item) { ?>
+                <div class="banner-images__item">
+                    <div class="image">
+                    <img src="<?= $image_item; ?>" alt="">
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</section>
+<?php } elseif($banner_type == 'full-background') { ?>
+    <section class="section section--default section--banner-full-bg section--<?= $background_color; ?> <?php if($no_padding_top) { echo 'pt-0'; } ?>">
+    <div class="container">
+        <div class="section__header section__header--<?= $section_header_color; ?>">
+            <?php if($supertitle) { ?>
+            <div class="section__supertitle section__supertitle--<?= $supertitle_style; ?>">
+                <?= $supertitle; ?>
+            </div>
+            <?php } ?>
+            <?php if($title) { ?>
+            <h2 class="section__title section__title">
+                <?= $title; ?>
+            </h2>
+            <?php } ?>
+            <?php if($text) { ?>
+            <div class="section__text rich-text">
+                <?= $text; ?>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+
+    <?php if($image) { ?>
+    <div class="banner__image">
+        <img src="<?= $image; ?>" alt="<?= $title; ?>">
+    </div>
+    <?php } ?>
+</section>
+<?php } else { ?>
 <section class="section section--banner">
     <div class="banner">
         <div class="banner__content">
@@ -54,3 +122,4 @@ $cta = get_field('cta');
         <?php } ?>
     </div>
 </section>
+<?php } ?>

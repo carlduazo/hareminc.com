@@ -107,7 +107,7 @@ $location_map_default = '';
                         <?php } ?>
                     <?php } ?>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <div class="locations__map">
                         <?= $location_map_default; ?>
                     </div>

@@ -93,6 +93,33 @@
             "delay": 0
         },
         {
+            "key": "field_673380eff142f",
+            "label": "Brands CTA",
+            "name": "brands_cta",
+            "aria-label": "",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "brands"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "return_format": "id",
+            "multiple": 1,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "ui": 1,
+            "bidirectional_target": []
+        },
+        {
             "key": "field_66f2dea8d27a3",
             "label": "CTA",
             "name": "cta",
@@ -377,5 +404,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1729231368
+    "modified": 1731428690
 }

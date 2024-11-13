@@ -1,7 +1,7 @@
 <?php 
 // 
 /**
- * Template Name: Chaiwallah default template
+ * Template Name: Harem default template
  */
 get_header(); ?>
 	

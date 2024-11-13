@@ -35,11 +35,11 @@ $posts = get_posts($args);
             <?php
                 // Display category buttons
             if ($categories) {
-                echo '<div class="blogs__filter">';
+                echo '<div class="blogs__filter isotope-filter">';
                 ?>
                 <label for="all" data-filter="*" id="all_data">
                     <input type="radio" name="blog_category" id="all" value="all"/>
-                    <span  class="button button--outline-secondary" ><?= __('Alle', 'epicode'); ?></span>
+                    <span  class="button button--outline-secondary" ><?= __('All', 'harem'); ?></span>
                     </label>
                 <?php
                 foreach ($categories as $category) {
@@ -50,7 +50,7 @@ $posts = get_posts($args);
             }
             ?>
             <div class="blogs blogs--default">
-                <div class="row blogs__row js">
+                <div class="row isotope-row blogs__row js">
                 <?php 
                     if ($posts) {
                         foreach ($posts as $post) {
@@ -69,7 +69,7 @@ $posts = get_posts($args);
                             }
                             $data_filter_value = implode(' ', $category_names);
                             ?>
-                            <div class="col-md-3 blogs__col js <?php echo esc_attr($data_filter_value); ?>">
+                            <div class="col-md-3 blogs__col isotope-item js <?php echo esc_attr($data_filter_value); ?>">
                                 <div class="blogs__item">
                                     <a href="<?php the_permalink(); ?>" class="image">
                                         <span class="badge reading-time"><?php echo $reading_time.' '.__('min', 'harem'); ?><?php echo ($reading_time > 1) ? 's' : ''; ?> <?= __('read', 'harem'); ?></span>

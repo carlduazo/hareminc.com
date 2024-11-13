@@ -163,7 +163,9 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '.button--sh
   var videoLink = $this.data('video-link');
   var iframeEmbed = 'https://www.youtube.com/embed/' + videoLink + '?autoplay=1&controls=1&playlist=' + videoLink + '&rel=0&modestbranding=1&showinfo=0&autohide=1';
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.video--youtube').attr('src', iframeEmbed);
-  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dimmer--media.js').dimmer('show');
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.dimmer--media.js').dimmer({
+    closable: false
+  }).dimmer('show');
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.videos__frame iframe').each(function () {
     var thisVideoCurrent = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-video');
     var iframeEmbed_current = 'https://www.youtube.com/embed/' + thisVideoCurrent + '?autoplay=0&controls=1&playlist=' + thisVideoCurrent + '&rel=0&modestbranding=1&showinfo=0&autohide=1?enablejsapi=1';
@@ -192,11 +194,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _blog__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./blog */ "./dev/js/blog.js");
 /* harmony import */ var _brands__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./brands */ "./dev/js/brands.js");
 /* harmony import */ var _dimmer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dimmer */ "./dev/js/dimmer.js");
-/* harmony import */ var _lasktop_nav__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./lasktop-nav */ "./dev/js/lasktop-nav.js");
-/* harmony import */ var _phablet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./phablet */ "./dev/js/phablet.js");
-/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./services */ "./dev/js/services.js");
-/* harmony import */ var _tab__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./tab */ "./dev/js/tab.js");
-/* harmony import */ var _testimonials__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./testimonials */ "./dev/js/testimonials.js");
+/* harmony import */ var _isotope__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./isotope */ "./dev/js/isotope.js");
+/* harmony import */ var _lasktop_nav__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./lasktop-nav */ "./dev/js/lasktop-nav.js");
+/* harmony import */ var _phablet__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./phablet */ "./dev/js/phablet.js");
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./services */ "./dev/js/services.js");
+/* harmony import */ var _tab__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./tab */ "./dev/js/tab.js");
+/* harmony import */ var _sliders__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sliders */ "./dev/js/sliders.js");
+/* harmony import */ var _testimonials__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./testimonials */ "./dev/js/testimonials.js");
 
 
 
@@ -206,6 +210,48 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+/***/ }),
+
+/***/ "./dev/js/isotope.js":
+/*!***************************!*\
+  !*** ./dev/js/isotope.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  // Initialize Isotope
+  var $isotopeGrid = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.isotope-row.js').isotope({
+    itemSelector: '.isotope-item.js',
+    layoutMode: 'fitRows'
+  });
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.isotope-filter label#all_data').trigger('click');
+
+  // Bind click event on category filter labels
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on('click', '.isotope-filter label', function () {
+    var filterValue = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-filter');
+    console.log('Filter value:', filterValue); // Debugging line
+
+    // If "all" filter is selected, show all items
+    if (filterValue === '*') {
+      $isotopeGrid.isotope({
+        filter: '*'
+      });
+    } else {
+      // Filter based on the selected category
+      $isotopeGrid.isotope({
+        filter: filterValue
+      });
+    }
+  });
+});
 
 /***/ }),
 
@@ -293,6 +339,38 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
         loop: false,
         nav: false,
         margin: 30
+      }
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./dev/js/sliders.js":
+/*!***************************!*\
+  !*** ./dev/js/sliders.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_0___default()('.gallery-images--partners').owlCarousel({
+    center: false,
+    items: 2,
+    loop: false,
+    margin: 20,
+    dots: true,
+    autoWidth: false,
+    autoplay: true,
+    responsive: {
+      768: {
+        items: 3,
+        margin: 40,
+        center: false
       }
     }
   });

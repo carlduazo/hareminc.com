@@ -48,6 +48,8 @@ function epic_register_blocks() {
   register_block_type( __DIR__ . '/template-parts/blocks/testimonials' ); //harem
   register_block_type( __DIR__ . '/template-parts/blocks/services' ); //harem
   register_block_type( __DIR__ . '/template-parts/blocks/brand-social-media' ); //harem
+  register_block_type( __DIR__ . '/template-parts/blocks/timeline' ); //harem
+  register_block_type( __DIR__ . '/template-parts/blocks/slider-images' ); //harem
   register_block_type( __DIR__ . '/template-parts/blocks/social-media' );
   register_block_type( __DIR__ . '/template-parts/blocks/usps' );
   register_block_type( __DIR__ . '/template-parts/blocks/videos' );

@@ -67,6 +67,14 @@
                 color: color('dark');
                 display: block;
                 transition: transition();
+                height: 55px;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                text-overflow: ellipsis;
+                white-space: normal;
+                max-height: 55px;
+                -webkit-line-clamp: 2;
 
                 @include state('hover', '.blogs__item') {
                     color: color('primary');

@@ -1,0 +1,16 @@
+{
+  "name": "epic/timeline",
+  "title": "Timeline",
+  "description": "A custom timeline block that uses ACF fields.",
+  "style": [ "file:./timeline.css" ],
+  "category": "harem",
+  "icon": "calendar-alt",
+  "keywords": ["timeline", "harem"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "timeline.php"
+  },
+  "supports": {
+      "anchor": true
+  }
+}

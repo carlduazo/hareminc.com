@@ -100,3 +100,34 @@
         }
     }
 }
+
+
+.gallery-images {
+
+    &__item {
+      display: block;
+  
+      @include state('gallery-images--partners', '.gallery-images') {
+        width: 100%;
+        padding-top: 70%;
+        background-color: white;
+        border-radius: 10px;
+        @include box-shadow;
+        
+        img {
+          @include image-contain;
+          mix-blend-mode: multiply;
+        }
+      }
+  
+      @include state('gallery-images--social-media', '.gallery-images') {
+        width: 100%;
+        padding-top: 100%;
+        position: relative;
+        
+        img {
+          @include image-cover;
+        }
+      }
+    }
+  }

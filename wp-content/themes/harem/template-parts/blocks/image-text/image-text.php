@@ -12,6 +12,7 @@ $title = get_field('title') ?: '';
 $text = get_field('text') ?: '';
 $cta_style = get_field('cta_style') ?: 'secondary';
 $cta = get_field('cta') ?: [];
+$brands_cta = get_field('brands_cta') ?: [];
 $content_position = get_field('content_position') ?: 'default';
 $image = get_field('image') ?: [];
 $image_style = get_field('image_style') ?: 'basic';
@@ -41,6 +42,17 @@ $youtube_id = get_field('youtube_video_link') ?: '';
               </div>
               <?php } ?>
           </div>
+          <?php if($brands_cta) { ?>
+            <div class="section__brands-cta">
+              <?php foreach($brands_cta as $brands_cta_item) { 
+                $logo = get_field('logo', $brands_cta_item);
+              ?>
+                <a href="<?= get_permalink($brands_cta_item); ?>">
+                  <img src="<?= $logo; ?>" alt="<?= get_the_title($brands_cta_item); ?>"/>
+                </a>
+              <?php } ?>
+            </div>
+          <?php } ?>
           <?php if($cta) { ?>
           <div class="section__cta section__cta--left">
               <a href="<?= $cta['url']; ?>" class="button button--<?= $cta_style; ?>"><?= $cta['title']; ?></a>

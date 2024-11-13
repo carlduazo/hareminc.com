@@ -44,6 +44,11 @@
 		background-color: <?= $brand_color; ?>;
 	}
 
+	.section__cta .button--white {
+		background-color: <?= $brand_color; ?>;
+		color: white;
+	}
+
 	.section__cta .button:hover {
 		background-color: <?= $brand_color; ?>;
 		filter: brightness(90%); 

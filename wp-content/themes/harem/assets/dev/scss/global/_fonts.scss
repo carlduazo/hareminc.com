@@ -26,3 +26,9 @@
     font-weight: 500;
     src: url('#{$fonts-path}/sweet-sans/SweetSansProMedium.otf') format('opentype');
 }
+
+@font-face {
+    font-family: 'SweetSans';
+    font-weight: bolder;
+    src: url('#{$fonts-path}/sweet-sans/SweetSansProBold.otf') format('opentype');
+}

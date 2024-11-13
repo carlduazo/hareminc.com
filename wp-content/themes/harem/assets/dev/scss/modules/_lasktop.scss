@@ -95,7 +95,7 @@
                     & > a {
                         display: flex;
                         text-transform: uppercase;
-                        font-weight: 400;
+                        font-weight: font-weight('medium');
                         min-height: 85px;
                         align-items: center ;
                         transition: transition();
@@ -161,14 +161,15 @@
 
                                 & > a {
                                     display: block;
+                                    font-weight: font-weight('medium');
                                     white-space: nowrap;
                                     padding: spacing('2x-small');
                                     text-transform: uppercase;
-                                    font-weight: 400;
 
                                     &:hover {
                                         background: color('primary');
                                         transition: transition();
+                                        color: color('white');
 
                                         @include state('header__lasktop--transparent', '.header__lasktop') {
                                             color: color('white');

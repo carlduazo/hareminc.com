@@ -1,6 +1,6 @@
 {
     "key": "group_672a204416fec",
-    "title": "Block: Social media (copy)",
+    "title": "Block: Brand social media",
     "fields": [
         {
             "key": "field_672a204419181",
@@ -157,5 +157,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1730814072
+    "modified": 1731492661
 }

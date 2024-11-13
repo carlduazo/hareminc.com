@@ -7,7 +7,9 @@ $(document).on('click', '.button--show-video', function(){
     var iframeEmbed = 'https://www.youtube.com/embed/' + videoLink + '?autoplay=1&controls=1&playlist=' + videoLink + '&rel=0&modestbranding=1&showinfo=0&autohide=1';
     
     $('.video--youtube').attr('src', iframeEmbed);
-    $('.dimmer--media.js').dimmer('show');
+    $('.dimmer--media.js').dimmer({
+        closable: false
+    }).dimmer('show');
 
     $('.videos__frame iframe').each(function(){
         

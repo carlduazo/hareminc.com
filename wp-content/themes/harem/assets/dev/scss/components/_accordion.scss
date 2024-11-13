@@ -18,7 +18,7 @@
         background: transparent;
         border-bottom: solid color('border') 1px;
         border-radius: 0;
-        padding: spacing('2x-small') 0;
+        padding: spacing() 0;
     }
 
     .accordion-title {
@@ -36,7 +36,8 @@
         h3 {
 
             @include state('accordion-group--locations', '.accordion-group') {
-                font-size: font-size('large');
+                font-size: font-size();
+                text-transform: uppercase;
                 font-weight: font-weight('semibold');
                 margin-bottom: 0;
                 flex: 1;

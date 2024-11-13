@@ -15,9 +15,11 @@ $text = get_field('text') ?: '';
 $cta_style = get_field('cta_style') ?: 'white';
 $cta = get_field('cta') ?: [];
 
-$usps = get_field('usps', 'options');
+$usps = get_field('usps') ?: [];
+
+$no_padding_top = get_field('no_padding_top') ?: '';
 ?>
-<section class="section section--default section--<?= $background_color; ?>">
+<section class="section section--default section--<?= $background_color; ?> <?php if($no_padding_top) { echo 'pt-0'; } ?>">
     <div class="container">
         <div class="section__header section__header--<?= $section_header_color; ?>">
             <?php if($supertitle) { ?>
@@ -36,14 +38,14 @@ $usps = get_field('usps', 'options');
             </div>
             <?php } ?>
         </div>
-        <div class="usps usps--<?= $section_header_color; ?>">
-            <div class="row">
+        <div class="usps">
+            <div class="row row-gap-md">
                 <?php 
                     foreach ($usps as $usp) { 
                 ?>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <div class="usps__item">
-                            <div class="icon"><img src="<?= $usp['icon']; ?>" alt="<?= $usp['title']; ?>"></div>
+                            <div class="icon"><img src="<?= $usp['image']; ?>" alt="<?= $usp['title']; ?>"></div>
                             <div class="title"><?= $usp['title']; ?></div>
                             <div class="text"><?= $usp['text']; ?></div>
                         </div>
