@@ -14,7 +14,7 @@
         box-shadow: 0px 4px 15px 0px rgba(61,61,61,0.1);
 
         @include media-breakpoint-down(md) {
-            background: color('white');
+            background: color('white') !important;
             border-bottom: solid color('border') 1px;
             min-height: 60px;
             display: flex;
@@ -117,14 +117,14 @@
                         cursor: pointer;
                         
                         @include state('header__lasktop--transparent', '.header__lasktop') {
-                            color: color('white');
+                            color: color('primary');
                         }
 
                         @include state('hover', 'li') {
-                            color: color('primary');
+                            color: color('primary-120');
 
                             @include state('header__lasktop--transparent', '.header__lasktop') {
-                                color: color('secondary');
+                                color: color('primary-120');
                             }
                         }
                     }
@@ -136,7 +136,7 @@
                         top: -1px;
 
                         @include state('header__lasktop--transparent', '.header__lasktop') {
-                            color: color('white');
+                            color: color('primary');
                         }
 
                         @include state('hover', 'li') {
@@ -144,7 +144,7 @@
                             transform: rotate(-180deg);
 
                             @include state('header__lasktop--transparent', '.header__lasktop') {
-                                color: color('secondary');
+                                color: color('primary-120');
                             }
                         }
                     }
@@ -188,7 +188,7 @@
 
                                         @include state('header__lasktop--transparent', '.header__lasktop') {
                                             color: color('white');
-                                            background: color('secondary');
+                                            background: color('primary-120');
                                         }
 
                                         @include state('header__lasktop--sticky', '.header__lasktop') {
@@ -252,10 +252,10 @@
                     font-size: 30px;
                     top: 3px;
                     position: relative;
-                    color: color('secondary');
+                    color: color('primary');
 
                     @include state('header__lasktop--transparent', '.header__lasktop') {
-                        color: color('white');
+                        color: color('primary');
                     }
                 }
             }

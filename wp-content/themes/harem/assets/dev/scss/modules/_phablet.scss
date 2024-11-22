@@ -37,7 +37,11 @@
             transform: translateY(0);
 
             @include state('header-is-stick', 'body'){
-                top: 60px;
+                top: 60px !important;
+            }
+
+            @include state('admin-bar', 'body'){
+                top: 106px;
             }
         }
 

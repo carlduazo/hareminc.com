@@ -85,6 +85,8 @@
     }
 
     &--hero {
+        background-color: #EADDEA;background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjIiIGhlaWdodD0iMjIiIHZpZXdCb3g9IjAgMCAyMiAyMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMTAuNSIgY3k9IjExLjUiIHI9IjEuNSIgZmlsbD0iIzc4NTM4RCIgZmlsbC1vcGFjaXR5PSIwLjEiLz4KPC9zdmc+Cg==);
+        background-repeat: repeat;
 
         @include media-breakpoint-down(md) {
             text-align: center;
@@ -532,7 +534,7 @@
 
         @include state('section--hero', '.section') {
 
-            color: color('white');
+            color: color('dark');
         }
 
         @include media-breakpoint-down(md) {
@@ -540,7 +542,7 @@
         }
 
         &--hero {
-            font-size: 64px;
+            font-size: 54px;
             text-align: left;
 
             @include media-breakpoint-down(md) {

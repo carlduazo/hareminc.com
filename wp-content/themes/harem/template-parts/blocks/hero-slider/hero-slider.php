@@ -8,7 +8,7 @@
 // Load values and assign defaults.
 $hero_sliders = get_field('hero_sliders') ?: [];
 ?>
-<section class="section section--hero hero js owl-carousel">
+<section class="section section--hero hero ">
     <?php 
         foreach($hero_sliders as $hero_slider) {
             $supertitle = $hero_slider['supertitle'] ?: '';
@@ -26,7 +26,7 @@ $hero_sliders = get_field('hero_sliders') ?: [];
         <div class="hero__content">
             <div class="content">
                 <div class="container container--<?= $content_position; ?>">
-                    <div class="wrap color--<?= $content_color; ?>">
+                    <div class="col-md-5 wrap">
                         <?php if($supertitle) { ?>
                         <div class="section__supertitle section__supertitle--<?= $supertitle_style; ?>">
                             <?= $supertitle; ?>
@@ -48,23 +48,12 @@ $hero_sliders = get_field('hero_sliders') ?: [];
                         </div>
                         <?php } ?>
                     </div>
+                    <div class="col-md-7 media-content">
+
+                        <img src="<?= $hero_slider['image']; ?>" alt="">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="hero__media">
-
-            <?php if($background_has_overlay) { ?>
-                <div class="background-overlay"></div>
-            <?php } ?>
-            <?php if($background == 'video') { ?>
-                <video loop="loop" muted  playsinline autoplay src="<?= $hero_slider['video']['url']; ?>" alt=""></video>
-            <?php } else { ?>
-                <img src="<?= $hero_slider['image']; ?>" alt="">
-            <?php } ?>
-
-            <?php if($hero_slider['image_background_mobile']) { ?>
-            <img src="<?= $hero_slider['image_background_mobile']; ?>" alt="" class="image-mobile">
-            <?php } ?>
         </div>
     </div>
     <?php } ?>

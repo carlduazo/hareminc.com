@@ -34,7 +34,7 @@
         </nav>
         <a href="<?= get_home_url(); ?>" class="header__brand">
             <?php if(is_front_page()) { ?>
-            <img src="<?php echo get_theme_file_uri().'/assets/public/images/harem-logo-white.svg'; ?>" alt="Harem logo" class="mb-0">
+            <img src="<?php echo get_theme_file_uri().'/assets/public/images/harem-logo.svg'; ?>" alt="Harem logo" class="mb-0">
             <?php } else { ?>
                 <img src="<?php echo get_theme_file_uri().'/assets/public/images/harem-logo.svg'; ?>" alt="Harem logo" class="mb-0">
             <?php } ?>
