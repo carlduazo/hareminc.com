@@ -11,18 +11,18 @@ get_header();
     .play-button {
         background-image: linear-gradient(to right, #F9D76B 0%, #E4B03D 100%); /* Yellowish gold to medium gold */
         background-size: 200% auto;
-        color: #917317;
+        color: #854A97;
     }
 
     .play-button .icon {
-        color: #917317;
+        color: #854A97;
     }
 
     .button--secondary:hover,
     a.button--secondary:hover,
     .play-button:hover { 
         background-position: right center; /* Reverses gradient direction on hover */
-        color: #5d4a0e;
+        color: #854A97;
     }
 
     .section__title,
