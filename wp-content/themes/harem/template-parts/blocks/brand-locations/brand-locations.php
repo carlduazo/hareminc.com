@@ -39,7 +39,7 @@ $location_map_default = '';
             <?php } ?>
         </div>
         <div class="locations tab-group js">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center row-gap-md">
                 <div class="col-md-2">
                     <div class="locations__cities">
                         <?php foreach($cities as $index => $city) { ?>

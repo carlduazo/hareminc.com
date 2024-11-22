@@ -1,10 +1,19 @@
 .locations {
 
+
     &__cities {
         display: flex;
         flex-direction: column;
         row-gap: spacing('3x-small');
         width: 100%;
+
+        @include media-breakpoint-down(md) {
+            flex-direction: row;
+            column-gap: spacing('2x-small');
+            overflow: auto;
+            width: 100%;
+            padding-bottom: 15px;
+        }
 
         .city {
             width: 100%;
@@ -17,6 +26,10 @@
             cursor: pointer;
             transition: transition();
             position: relative;
+
+            @include media-breakpoint-down(md) {
+                white-space: nowrap;
+            }
 
             &.tab-title-active {
                 background: color('primary');
@@ -33,6 +46,12 @@
                     border-width: 7.5px 0 7.5px 8px;
                     border-color: transparent transparent transparent color('primary');
                     transform:  translateY(-50%) rotate(0deg);
+
+                    @include media-breakpoint-down(md) {
+                        top: calc(100% - 4px);
+                        left: 50%;
+                        transform:  translateX(-50%) rotate(90deg);
+                    }
                 }
             }
 

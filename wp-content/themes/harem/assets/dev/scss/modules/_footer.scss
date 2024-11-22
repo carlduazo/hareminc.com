@@ -29,6 +29,10 @@
             row-gap: spacing('2x-small');
             column-gap: spacing('small');
 
+            @include media-breakpoint-down(md) {
+                justify-content: center;
+            }
+
             &__item {
 
                 img{
@@ -181,11 +185,13 @@
 
     .section__links {
         justify-content: flex-start;
-        row-gap: spacing('2x-small');
+        row-gap: spacing('x-small');
         margin-bottom: 0;
 
         @include media-breakpoint-down(md) {
             margin-bottom: spacing();
+            justify-content: center;
+            row-gap: spacing('2x-small');
         }
     }
 }

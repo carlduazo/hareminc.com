@@ -5,6 +5,10 @@
 
     &--default {
         padding: spacing('huge') 0;
+
+        @include media-breakpoint-down(md) {
+            padding: spacing('2x-large') 0;
+        }
     }
 
     &--pdb-0 {
@@ -159,10 +163,12 @@
             height: auto;
 
             &::before {
-               @include overlay;
+            //    @include overlay;
                z-index: 2;
             }
         }
+
+    
 
         .row--section {
 
@@ -171,6 +177,10 @@
                 .image {
                     overflow: hidden;
                     border-radius: 30px 30px 30px 300px;
+
+                    @include media-breakpoint-down(md) { 
+                        border-radius: 20px 20px 20px 20px;
+                    }
                 }
             }
         }
@@ -205,6 +215,11 @@
                 left: 30px;
                 z-index: 2;
                 cursor: pointer;
+
+                @include media-breakpoint-down(md) {
+                    bottom: 20px;
+                    left: 20px;
+                }
             }
 
             &--rounded {
@@ -221,6 +236,10 @@
 
         .numbers-images {
             margin-top: spacing('large');
+            
+            @include media-breakpoint-down(md) {
+                row-gap: spacing();
+            }
         }
 
         .numbers {
@@ -228,11 +247,20 @@
             flex-direction: column;
             row-gap: spacing('large');
 
+            @include media-breakpoint-down(md) {
+                flex-direction: row;
+                column-gap: spacing();
+            }
+
             &__item {
                 display: flex;
                 flex-direction: column;
                 row-gap: spacing('3x-small');
                 align-items: center;
+
+                @include media-breakpoint-down(md) {
+                    flex: 1;
+                }
 
                 .count {
                     color: color('secondary');
@@ -264,11 +292,14 @@
                 }
             }
 
-            .col-md-6:nth-child(2) {
+            .col-6:nth-child(2) {
                 margin-top: -32px;
 
-                .small-image {
+                @include media-breakpoint-down(md) {
+                    margin-top: 0;
+                }
 
+                .small-image {
                     border-radius: 20px 20px 100px 20px;
                 }
             }
@@ -362,6 +393,10 @@
         .image {
             overflow: hidden;
             border-radius: 300px 30px 30px 30px;
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
             
             img {
                 width: 100%;
@@ -372,6 +407,10 @@
 
     &--iframe {
         padding: spacing('huge') 0;
+
+        @include media-breakpoint-down(md) {
+           padding: 0;
+        }
 
         .container {
             z-index: 1;
@@ -385,10 +424,27 @@
             top: 0;
             left: 0;
             z-index: 0;
+
+            @include media-breakpoint-down(md) {
+                position: relative;
+                margin-top: spacing();
+                height: 400px;
+                margin-bottom: -10px;
+            }
         }
 
         .custom-panel {
             @include box-shadow-panel;
+        }
+    }
+
+    &--image_text_image {
+
+        .image {
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
         }
     }
 
@@ -443,6 +499,27 @@
 
         &--left {
             text-align: left;
+
+            @include state(('section--brands', 'section--timeline'), '.section') { 
+
+                @include media-breakpoint-down(md) { 
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &__quote {
+        
+        @include media-breakpoint-down(md) { 
+            text-align: center;
+        }
+
+        img {
+            @include media-breakpoint-down(md) { 
+                width: 50px;
+                height: auto;
+            }
         }
     }
 
@@ -504,6 +581,13 @@
 
         &--left {
             text-align: left !important;
+
+            @include state('section--brands', '.section') { 
+
+                @include media-breakpoint-down(md) { 
+                    text-align: center !important;
+                }
+            }
         }
 
         .button {
@@ -519,9 +603,22 @@
         column-gap: spacing('x-small');
         align-items: center;
 
+
+        @include media-breakpoint-down(md) { 
+            column-gap: 0;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            row-gap: spacing('2x-small');
+        }
+
         img {
             max-width: 250px;
-            max-height: 100px;
+            max-height: 150px;
+
+            @include media-breakpoint-down(md) { 
+                max-width: 200px;
+                max-height: 100px;
+            }
         }
     }
 

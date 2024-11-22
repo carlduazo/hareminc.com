@@ -18,7 +18,7 @@ $cta = get_field('cta') ?: [];
 $timeline = get_field('timeline') ?: [];
 
 ?>
-<section class="section section--default section--<?= $background_color; ?>">
+<section class="section section--default section--<?= $background_color; ?> section--timeline">
     <div class="container">
         <div class="row">
             <div class="col-md-5">

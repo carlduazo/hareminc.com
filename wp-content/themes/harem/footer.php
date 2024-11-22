@@ -21,7 +21,7 @@
   <footer>
     <div class="footer">
       <div class="container">
-        <div class="row">
+        <div class="row row-gap-md">
           <div class="col-md-3">
             <a href="<?= get_home_url(); ?>" class="footer__brand">
               <img src="<?php echo get_theme_file_uri().'/assets/public/images/harem-logo.svg'; ?>" alt="Harem logo" class="mb-0">

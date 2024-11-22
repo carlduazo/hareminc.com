@@ -115,8 +115,13 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).ready(function () {
     autoplay: false,
     animateIn: 'fadeIn',
     animateOut: 'fadeOut',
-    nav: true,
-    navText: ['<i class="icon icon-angle-left"></i>', '<i class="icon icon-angle-right"></i>']
+    nav: false,
+    navText: ['<i class="icon icon-angle-left"></i>', '<i class="icon icon-angle-right"></i>'],
+    responsive: {
+      768: {
+        nav: true
+      }
+    }
   });
 
   // Synchronize the navigation with the main slider

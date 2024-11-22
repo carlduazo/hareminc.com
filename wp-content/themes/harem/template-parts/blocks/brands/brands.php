@@ -14,7 +14,7 @@ $cta_style = get_field('cta_style') ?: 'white';
 $cta = get_field('cta');
 $brands = get_field('brands');
 ?>
-<section class="section section--default section--<?= $background_color; ?>">
+<section class="section section--default section--<?= $background_color; ?> section--brands">
     <div class="container">
         <div class="section__header">
             <?php if($supertitle) { ?>
@@ -58,7 +58,7 @@ $brands = get_field('brands');
                             $youtube_id = get_field('home_video_link', $brand) ?: '';
                         ?>
                             <div class="section section--brands-slider">
-                                <div class="row row--section align-items-center">
+                                <div class="row row-gap-md row--section align-items-center">
                                     <div class="col-md-6">
                                         <div class="section__header section__header--left">
                                             <?php if($brand_supertitle) { ?>

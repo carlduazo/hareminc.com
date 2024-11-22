@@ -39,7 +39,7 @@ $company = get_field('company', 'options');
                     <?= $vacancies['text']; ?>
                 </div>
             </div>
-            <div class="row">
+            <div class="row row-gap-md">
                 <div class="col-md-8">
                     <?php if($posts) { ?>
                         <div class="accordion-group js">

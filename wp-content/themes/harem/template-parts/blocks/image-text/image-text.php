@@ -23,7 +23,7 @@ $youtube_id = get_field('youtube_video_link') ?: '';
 ?>
 <section class="section section--default section--image-text section--<?= $background_color; ?>">
     <div class="container">
-      <div class="row row--section align-items-center <?= $content_position; ?>">
+      <div class="row row--section row-gap-md align-items-center <?= $content_position; ?>">
         <div class="col-md-6">
           <div class="section__header  section__header--left section__header--<?= $section_header_color; ?>">
               <?php if($supertitle) { ?>
@@ -58,6 +58,7 @@ $youtube_id = get_field('youtube_video_link') ?: '';
               <a href="<?= $cta['url']; ?>" class="button button--<?= $cta_style; ?>"><?= $cta['title']; ?></a>
           </div>
           <?php } ?>
+          <?php if($numbers || $small_images) { ?>
           <div class="row numbers-images">
             <?php if($numbers) { ?>
             <div class="col-md-4">
@@ -79,7 +80,7 @@ $youtube_id = get_field('youtube_video_link') ?: '';
                 <?php
                   foreach($small_images as $small_image) {
                 ?>
-                <div class="col-md-6">
+                <div class="col-6">
                   <div class="small-image">
                     <img src="<?= $small_image['image']; ?>" alt="<?= $title; ?>">
                   </div>
@@ -89,6 +90,7 @@ $youtube_id = get_field('youtube_video_link') ?: '';
             </div>
             <?php } ?>
           </div>
+          <?php } ?>
         </div>
 
         <div class="col-md-6">

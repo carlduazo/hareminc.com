@@ -26,5 +26,6 @@ Site made by
   	<header class="header">
 		<?php
 			get_template_part('template-parts/navigation/lasktop');
+			get_template_part('template-parts/navigation/phablet');
 		?>
   	</header>

@@ -98,6 +98,11 @@
         overflow: auto;
         justify-content: center;
 
+        @include media-breakpoint-down(md) { 
+            margin-top: -24px;
+            justify-content: space-around;
+        }
+
         label {
             padding-bottom: spacing('x-small');
 
@@ -180,6 +185,12 @@
         display: flex;
         flex-direction: column;
         row-gap: spacing('2x-small');
+
+        @include media-breakpoint-down(md) { 
+            flex-direction: row;
+            column-gap: 12px;
+            margin-bottom: spacing('x-small');
+        }
     }
 }
 
@@ -190,6 +201,10 @@ body.blog {
 .blog {
     padding: spacing('huge') 0 0;
 
+    @include media-breakpoint-down(md) { 
+        padding-top: spacing('2x-large');
+    }
+
     &__title {
         @include title-semibold-large;
         text-transform: none;
@@ -197,11 +212,18 @@ body.blog {
         margin-bottom: spacing('large');
         font-weight: font-weight('medium');
         color: color('primary');
+
+        @include media-breakpoint-down(md) { 
+            font-size: 20px;
+            line-height: 1.3;
+            margin-bottom: spacing('2x-small');
+        }
     }
 
     &__image {
         text-align: center;
         margin-bottom: spacing('large');
+        margin-top: spacing('x-small');
 
         img {
             width: 100%;
@@ -233,6 +255,12 @@ body.blog {
 
         margin-bottom: spacing('2x-small');
 
+        @include media-breakpoint-down(md) { 
+            flex-direction: row;
+            column-gap: spacing('2x-small');
+            justify-content: flex-start;
+        }
+
         .image {
             position: relative;
             width: 80px;
@@ -240,6 +268,11 @@ body.blog {
             border-radius: 100px;
             border: solid color('border') 1px;
             overflow: hidden;
+
+            @include media-breakpoint-down(md) { 
+                width: 40px;
+                height: 40px;
+            }
 
             img {
                 @include image-cover;
@@ -257,6 +290,11 @@ body.blog {
         display: flex;
         flex-direction: column;
         row-gap: spacing('4x-small');
+
+        @include media-breakpoint-down(md) {
+            flex-direction: row;
+            column-gap: spacing();
+        }
 
         .item {
             display: flex;
@@ -310,3 +348,35 @@ body.blog {
     }
    
 }
+
+.single-post {
+
+    .fancybox__content {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #E6B800 0%, #D4A017 51%, #E6B800 100%); /* Muted gold gradient */
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: #FFFFFF; /* White text */
+    border-radius: 10px; /* Slightly rounded corners */
+    display: block;
+    font-weight: bold;
+    border: none; /* No border */
+    box-shadow: none; /* Remove shadow */
+ }
+ 
+ .btn-grad:hover {
+    background-position: right center; /* Reverses gradient direction on hover */
+    background: unset;
+    color: #FFFFFF; /* Keeps text consistent */
+    text-decoration: none;
+ }
+ 

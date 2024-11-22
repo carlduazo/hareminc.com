@@ -2,12 +2,21 @@
 
     .owl-dots {
         justify-content: flex-start;
+
+        @include media-breakpoint-down(md) { 
+            justify-content: center;
+            margin-top: spacing('2x-small');
+        }
     }
 
     &__item {
 
         .text {
             font-size: font-size('large');
+
+            @include media-breakpoint-down(md) { 
+                text-align: center;
+            }
         }
 
         .reviewer {
@@ -16,6 +25,12 @@
             align-items: center;
             margin-top: spacing('x-small');
             padding-bottom: spacing('2x-small');
+
+            @include media-breakpoint-down(md) {  
+                flex-direction: column;
+                align-items: center;
+                row-gap: spacing('2x-small');
+            }
 
             .image {
                 width: 70px;
@@ -35,6 +50,11 @@
             .name-role {
                 display: flex;
                 flex-direction: column;
+
+                @include media-breakpoint-down(md) {  
+                    align-items: center;
+                    text-align: center;
+                }
 
                 .name {
                     font-weight: font-weight('medium');

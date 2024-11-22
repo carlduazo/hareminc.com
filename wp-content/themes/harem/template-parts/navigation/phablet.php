@@ -1,9 +1,4 @@
 <div class="header__phablet">
-    <div class="phablet-search">
-        <div class="search-form">
-            <?php echo \SearchWP\Forms\Frontend::render( [ 'id' => 1 ] ); ?>
-        </div>
-    </div>
     <div class="menu">
         <ul class="p-0">
             <?php

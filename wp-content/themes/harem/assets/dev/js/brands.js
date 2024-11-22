@@ -24,8 +24,13 @@ $(document).ready(function(){
         autoplay: false,
         animateIn: 'fadeIn',
         animateOut: 'fadeOut',
-        nav: true,
+        nav: false,
         navText: ['<i class="icon icon-angle-left"></i>', '<i class="icon icon-angle-right"></i>'],
+        responsive: {
+            768 : {
+                nav: true,
+            }
+        }
     });
 
    // Synchronize the navigation with the main slider

@@ -7,6 +7,11 @@
             @include state('phablet-nav-is-active', 'body') {
                 content: "\e910";
                 -webkit-text-stroke: white 1px;
+                
+
+                @include state('header__lasktop--transparent', '.header__lasktop') {
+                    -webkit-text-stroke: rgba(80, 80, 80, 0.5) 2px;
+                }
             }
         }
     }
@@ -28,11 +33,11 @@
         }
 
         @include state('phablet-nav-is-active', 'body') {
-            top: 108px;
+            top: 60px;
             transform: translateY(0);
 
             @include state('header-is-stick', 'body'){
-                top: 70px;
+                top: 60px;
             }
         }
 
@@ -48,7 +53,6 @@
                     flex-wrap: wrap;
 
                     a {
-                        font-family: $font-header;
                         font-size: font-size('large');
                         text-transform: uppercase;
                         padding: spacing('2x-small') spacing('x-small');
@@ -60,10 +64,14 @@
                     .menu-expand {
                         padding: spacing('2x-small') spacing('small');
 
+                        .icon {
+                            position: relative;
+                            top: 4px;
+                        }
+
                         &.expanded {
 
                             .icon {
-
                                 &:before {
                                     content: '\e913';
                                 }

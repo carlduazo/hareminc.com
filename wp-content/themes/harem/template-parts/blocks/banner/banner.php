@@ -21,7 +21,7 @@ $no_padding_top = get_field('no_padding_top') ?: '';
 ?>
 
 <?php if($banner_type == 'multiple-images') { ?>
-<section class="section section--default pb-0 section--<?= $background_color; ?>">
+<section class="section section--default section--banner-multiple-images pb-0 section--<?= $background_color; ?>">
     <div class="container">
         <div class="section__header section__header--<?= $section_header_color; ?>">
             <?php if($supertitle) { ?>
@@ -83,7 +83,7 @@ $no_padding_top = get_field('no_padding_top') ?: '';
     <?php } ?>
 </section>
 <?php } else { ?>
-<section class="section section--banner">
+<section class="section section--banner section--right-bg">
     <div class="banner">
         <div class="banner__content">
             <div class="container">

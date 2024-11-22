@@ -1,25 +1,6 @@
 <div class="header__lasktop <?php if(is_front_page()) { echo "header__lasktop--transparent"; } ?>">
     <div class="container">
         <nav class="menu">
-            <div class="menu-icons">
-                <div class="menu-icons__item menu-icons__item--language">
-                    <a href="">
-                        <img src="<?php echo get_theme_file_uri().'/assets/public/images/sample-flag.svg'; ?>" alt="Chaiwallah logo" class="language-flag">
-                    </a>
-                </div>
-                <div class="menu-icons__item">
-                    <div class="menu-icons__item">
-                        <a class="phablet-nav-link js">
-                            <i class="icon icon-menu"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="menu-icons__item">
-                    <a>
-                        <i class="icon icon-search"></i>
-                    </a>
-                </div>
-            </div>
             <ul>
                 <?php 
                     $primary_menu_items = get_menu_items_by_location('primary');
@@ -59,6 +40,19 @@
             <?php } ?>
         </a>
         <nav class="right-menu">
+
+        <div class="menu-icons">
+            <div class="menu-icons__item menu-icons__item--language">
+                    <a href="">
+                        <img src="<?php echo get_theme_file_uri().'/assets/public/images/sample-flag.svg'; ?>" alt="Chaiwallah logo" class="language-flag">
+                    </a>
+                </div>
+                <div class="menu-icons__item menu-icons__item--phablet">
+                    <a class="phablet-nav-link js">
+                        <i class="icon icon-menu"></i>
+                    </a>
+                </div>
+            </div>
             <ul>
                 <?php 
                     $primary_menu_items = get_menu_items_by_location('primary');
@@ -93,28 +87,9 @@
     </div>
 </div>
 
-<div class="header__lasktop header__lasktop--sticky">
+<div class="header__lasktop  header__lasktop--sticky">
     <div class="container">
         <nav class="menu">
-            <div class="menu-icons">
-                <div class="menu-icons__item menu-icons__item--language">
-                    <a href="">
-                        <img src="<?php echo get_theme_file_uri().'/assets/public/images/sample-flag.svg'; ?>" alt="Chaiwallah logo" class="language-flag">
-                    </a>
-                </div>
-                <div class="menu-icons__item">
-                    <div class="menu-icons__item">
-                        <a class="phablet-nav-link js">
-                            <i class="icon icon-menu"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="menu-icons__item">
-                    <a>
-                        <i class="icon icon-search"></i>
-                    </a>
-                </div>
-            </div>
             <ul>
                 <?php 
                     $primary_menu_items = get_menu_items_by_location('primary');
@@ -150,6 +125,19 @@
             <img src="<?php echo get_theme_file_uri().'/assets/public/images/harem-logo.svg'; ?>" alt="Harem logo" class="mb-0">
         </a>
         <nav class="right-menu">
+
+        <div class="menu-icons">
+            <div class="menu-icons__item menu-icons__item--language">
+                    <a href="">
+                        <img src="<?php echo get_theme_file_uri().'/assets/public/images/sample-flag.svg'; ?>" alt="Chaiwallah logo" class="language-flag">
+                    </a>
+                </div>
+                <div class="menu-icons__item menu-icons__item--phablet">
+                    <a class="phablet-nav-link js">
+                        <i class="icon icon-menu"></i>
+                    </a>
+                </div>
+            </div>
             <ul>
                 <?php 
                     $primary_menu_items = get_menu_items_by_location('primary');

@@ -17,7 +17,7 @@ a.button {
     padding: spacing('x-small') spacing('x-large');
 
     &:hover {
-        background: color('primary-120');
+        // background: color('primary-120');
         color: color('dark');
     }
 
@@ -89,7 +89,7 @@ a.button {
         color: color('white');
 
         &:hover {
-            background: color('secondary-120');
+            // background: color('secondary-120');
             color: color('white');
         }
     }
@@ -214,6 +214,6 @@ a.button {
 
     &:hover {
         transform: scale(1.2);
-        background: color('secondary-120');
+        // background: color('secondary-120');
     }
 }
