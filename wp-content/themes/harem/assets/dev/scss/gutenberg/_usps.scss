@@ -43,7 +43,8 @@
             color: color('secondary');
             font-weight: font-weight('medium');
             text-transform: uppercase;
-            margin-bottom: spoac;
+
+            @include gold-text;
         }
 
         .text {

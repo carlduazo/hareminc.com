@@ -5,8 +5,9 @@
 
 <style>
     .section--social-links .button--social{
-        border-color: <?= $brand_color; ?>;
+        border: dashed <?= $brand_color; ?> 1px;
         color: <?= $brand_color; ?>;
+		background-image: none;
     }
 
     .section--social-links .button--social:hover{
@@ -42,6 +43,8 @@
 
 	.section__cta .button {
 		background-color: <?= $brand_color; ?>;
+
+		background-image: none;
 	}
 
 	.section__cta .button--white {

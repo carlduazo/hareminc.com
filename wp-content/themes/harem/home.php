@@ -39,12 +39,12 @@ $posts = get_posts($args);
                 ?>
                 <label for="all" data-filter="*" id="all_data">
                     <input type="radio" name="blog_category" id="all" value="all"/>
-                    <span  class="button button--outline-secondary" ><?= __('All', 'harem'); ?></span>
+                    <span  class="button button--outline-primary" ><?= __('All', 'harem'); ?></span>
                     </label>
                 <?php
                 foreach ($categories as $category) {
                     // Output a button for each category
-                    echo '<label for="blog_category_'.$category->slug.'" data-filter=".blog_category_'.$category->slug.'">' . ' <input type="radio" id="blog_category_'. $category->slug . '" name="blog_category" value="blog_category_'. $category->slug . '"/> <span class="button button--outline-secondary">'.esc_html($category->name).'</span></label>';
+                    echo '<label for="blog_category_'.$category->slug.'" data-filter=".blog_category_'.$category->slug.'">' . ' <input type="radio" id="blog_category_'. $category->slug . '" name="blog_category" value="blog_category_'. $category->slug . '"/> <span class="button button--outline-primary">'.esc_html($category->name).'</span></label>';
                 }
                 echo '</div>';
             }

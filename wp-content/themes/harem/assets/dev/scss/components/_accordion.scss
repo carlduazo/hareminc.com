@@ -73,6 +73,8 @@
             font-size: 18px;
             color: color('secondary');
 
+            @include gold-text;
+
 
             @include state('accordion-active', '.accordion') {
                 

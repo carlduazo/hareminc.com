@@ -88,8 +88,10 @@ a.button {
         background: color('secondary');
         color: color('white');
 
+        @include gold-button;
+
         &:hover {
-            // background: color('secondary-120');
+            @include gold-button-hover;
             color: color('white');
         }
     }
@@ -166,14 +168,15 @@ a.button {
 
     &--social {
         background: transparent;
-        border: dashed color('secondary') 1px;
-        color: color('secondary');
-        transition: transition();
+        color: color('white');
+
+        @include gold-button;
 
         &:hover {
-            background: color('secondary');
-            border: solid color('secondary') 1px;
             color: color('white');
+
+
+            @include gold-button-hover;
         }
     }
 
@@ -203,6 +206,8 @@ a.button {
     box-shadow: 0px 4px 10px 0px rgba(0,0,0,0.14);
     transition: transition();
 
+    @include gold-button;
+
     .icon {
         position: absolute;
         left: 50%;
@@ -213,6 +218,7 @@ a.button {
     }
 
     &:hover {
+        @include gold-button-hover;
         transform: scale(1.2);
         // background: color('secondary-120');
     }

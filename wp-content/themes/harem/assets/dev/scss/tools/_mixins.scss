@@ -177,3 +177,19 @@
       -webkit-transform: scale(1.1);
   }
 }
+
+@mixin gold-text {
+  background-image: linear-gradient(to right, #C79C3D 0%, #8E6A30 100%); /* Slightly darker gold gradient */
+  -webkit-background-clip: text; /* Apply gradient to text */
+  background-clip: text; /* For modern browsers */
+  color: transparent !important; /* Text color is transparent to show the gradient */
+}
+
+@mixin gold-button {
+  background-image: linear-gradient(to right, #D4AF37 0%, #8B6A2F 51%, #D4AF37 100%); /* True Gold to Dark Gold */
+  background-size: 200% auto;
+}
+
+@mixin gold-button-hover {
+  background-position: right center; /* Reverses gradient direction on hover */
+}

@@ -77,7 +77,7 @@ $blog_posts = get_posts($args);
         </div>
 
         <div class="section__cta">
-            <a href="<?= esc_url( $post_archive_link ); ?>" class="button button--outline-secondary"><?= __('Read more', 'harem') ?></a>
+            <a href="<?= esc_url( $post_archive_link ); ?>" class="button button--secondary"><?= __('Read more', 'harem') ?></a>
         </div>
     </div>
 </section>

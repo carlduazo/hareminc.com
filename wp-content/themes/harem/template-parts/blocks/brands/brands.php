@@ -79,7 +79,7 @@ $brands = get_field('brands');
                                         </div>
 
                                         <div class="section__cta section__cta--left">
-                                            <a href="<?= $brand_link; ?>" class="button button--outline-secondary"><?= __('Read more', 'harem'); ?></a>
+                                            <a href="<?= $brand_link; ?>" class="button button--secondary"><?= __('Read more', 'harem'); ?></a>
                                         </div>
                                     </div>
                                     <div class="col-md-6">

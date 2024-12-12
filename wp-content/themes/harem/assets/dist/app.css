@@ -11416,7 +11416,15 @@ a {
   .custom-panel--info h2, .custom-panel--info .h2 {
     font-size: 24px;
     color: #D99D02;
-    margin-bottom: 12px; }
+    margin-bottom: 12px;
+    background-image: linear-gradient(to right, #C79C3D 0%, #8E6A30 100%);
+    /* Slightly darker gold gradient */
+    -webkit-background-clip: text;
+    /* Apply gradient to text */
+    background-clip: text;
+    /* For modern browsers */
+    color: transparent !important;
+    /* Text color is transparent to show the gradient */ }
 
 .coupon__form {
   display: flex;
@@ -12494,7 +12502,15 @@ body.phablet-nav-is-active .header .icon-menu:before {
       position: relative;
       top: 5px;
       font-size: 18px;
-      color: #D99D02; }
+      color: #D99D02;
+      background-image: linear-gradient(to right, #C79C3D 0%, #8E6A30 100%);
+      /* Slightly darker gold gradient */
+      -webkit-background-clip: text;
+      /* Apply gradient to text */
+      background-clip: text;
+      /* For modern browsers */
+      color: transparent !important;
+      /* Text color is transparent to show the gradient */ }
       .accordion.accordion-active .accordion-title .icon:before {
         content: '\e913'; }
       .accordion-group.accordion-group--locations .accordion .accordion-title .icon {
@@ -12619,10 +12635,15 @@ a.button {
   .btn--secondary,
   a.button--secondary {
     background: #D99D02;
-    color: #ffffff; }
+    color: #ffffff;
+    background-image: linear-gradient(to right, #D4AF37 0%, #8B6A2F 51%, #D4AF37 100%);
+    /* True Gold to Dark Gold */
+    background-size: 200% auto; }
     .button--secondary:hover,
     .btn--secondary:hover,
     a.button--secondary:hover {
+      background-position: right center;
+      /* Reverses gradient direction on hover */
       color: #ffffff; }
   .button--facebook,
   .btn--facebook,
@@ -12698,15 +12719,16 @@ a.button {
   .btn--social,
   a.button--social {
     background: transparent;
-    border: dashed #D99D02 1px;
-    color: #D99D02;
-    transition: ease 0.3s all; }
+    color: #ffffff;
+    background-image: linear-gradient(to right, #D4AF37 0%, #8B6A2F 51%, #D4AF37 100%);
+    /* True Gold to Dark Gold */
+    background-size: 200% auto; }
     .button--social:hover,
     .btn--social:hover,
     a.button--social:hover {
-      background: #D99D02;
-      border: solid #D99D02 1px;
-      color: #ffffff; }
+      color: #ffffff;
+      background-position: right center;
+      /* Reverses gradient direction on hover */ }
   .button--brand,
   .btn--brand,
   a.button--brand {
@@ -12731,7 +12753,10 @@ a.button {
   -webkit-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.14);
   -moz-box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.14);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.14);
-  transition: ease 0.3s all; }
+  transition: ease 0.3s all;
+  background-image: linear-gradient(to right, #D4AF37 0%, #8B6A2F 51%, #D4AF37 100%);
+  /* True Gold to Dark Gold */
+  background-size: 200% auto; }
   .play-button .icon {
     position: absolute;
     left: 50%;
@@ -12740,6 +12765,8 @@ a.button {
     color: #ffffff;
     font-size: 50px; }
   .play-button:hover {
+    background-position: right center;
+    /* Reverses gradient direction on hover */
     transform: scale(1.2); }
 
 .company {
@@ -12973,7 +13000,7 @@ textarea.input-field {
     font-family: "SweetSans", "Lato", "Poppins", sans-serif;
     font-weight: 500;
     font-size: 18px;
-    color: #D99D02;
+    color: #854A97;
     display: inline-flex;
     letter-spacing: 1.5px;
     margin-bottom: 12px;
@@ -13065,7 +13092,14 @@ textarea.input-field {
           .section--image-text .numbers__item {
             flex: 1; } }
         .section--image-text .numbers__item .count {
-          color: #D99D02;
+          background-image: linear-gradient(to right, #C79C3D 0%, #8E6A30 100%);
+          /* Slightly darker gold gradient */
+          -webkit-background-clip: text;
+          /* Apply gradient to text */
+          background-clip: text;
+          /* For modern browsers */
+          color: transparent !important;
+          /* Text color is transparent to show the gradient */
           font-family: "Playfair Display", sans-serif;
           font-size: 40px;
           text-align: center;
@@ -13212,7 +13246,15 @@ textarea.input-field {
     font-weight: 400;
     line-height: 1.3;
     font-size: 40px;
-    color: #854A97; }
+    color: #854A97;
+    background-image: linear-gradient(to right, #C79C3D 0%, #8E6A30 100%);
+    /* Slightly darker gold gradient */
+    -webkit-background-clip: text;
+    /* Apply gradient to text */
+    background-clip: text;
+    /* For modern browsers */
+    color: transparent !important;
+    /* Text color is transparent to show the gradient */ }
     .section.section--hero .section__title {
       color: #101020; }
     @media (max-width: 767.98px) {
@@ -13586,7 +13628,7 @@ textarea.input-field {
         visibility: hidden;
         width: 0; }
       .blogs__filter label input:checked + span {
-        background: #D99D02;
+        background: #854A97;
         color: #ffffff; }
         .blogs__filter label input:checked + span:after {
           position: absolute;
@@ -13598,7 +13640,7 @@ textarea.input-field {
           height: 0px;
           border-style: solid;
           border-width: 10px 10px 0 10px;
-          border-color: #D99D02 transparent transparent transparent;
+          border-color: #854A97 transparent transparent transparent;
           transform: rotate(0deg); }
       .blogs__filter label span {
         white-space: nowrap;
@@ -14216,7 +14258,10 @@ body.blog {
       left: -12.50px;
       top: 50%;
       transform: translateY(-50%);
-      border: solid #F6EFF6 5px; }
+      border: solid #F6EFF6 5px;
+      background-image: linear-gradient(to right, #D4AF37 0%, #8B6A2F 51%, #D4AF37 100%);
+      /* True Gold to Dark Gold */
+      background-size: 200% auto; }
   .timeline__content {
     justify-content: center;
     display: flex;
@@ -14274,7 +14319,14 @@ body.blog {
     color: #D99D02;
     font-weight: 500;
     text-transform: uppercase;
-    margin-bottom: spoac; }
+    background-image: linear-gradient(to right, #C79C3D 0%, #8E6A30 100%);
+    /* Slightly darker gold gradient */
+    -webkit-background-clip: text;
+    /* Apply gradient to text */
+    background-clip: text;
+    /* For modern browsers */
+    color: transparent !important;
+    /* Text color is transparent to show the gradient */ }
   .usps__item .text p {
     margin-bottom: 0; }
   .usps__item .text h4, .usps__item .text .h4 {
